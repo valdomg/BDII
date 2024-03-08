@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <H1>AGENDA</H1>
+    <div class="table">
+        <table>
+            <tr>
+                <td class="linha">ID</td>
+                <td class="linha">NAME</td>
+                <td class="linha">NUMBER</td>
+                <td class="linha">EMAIL</td>
+            </tr>
+                {% for row in data %}
+            <tr>
+                <td>{{row[0]}}</td> <!--LINE WITH DATA FROM TABLE CONTACTS COLUNM ID-->
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                
+                <!--BUTTONS FOR EDIT AND DELETE ON TABLE CONTACTS-->
+                
+                <td>
+                    <!--BUTTON ON CLICK TO TAKE VALUE OF ID OF CONTACT TO EDIT-->
+                    <a class="button" href="{{url_for('editUser', id=row[0])}}">EDIT</a>
+                    <a class="button" href="{{url_for('delUser', id=row[0])}}">DEL</a>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a class="button" href="{{url_for('pageUser')}}">CAD USER</a> <!--ROUTE FOR PAGE CADUSER (CALL FUNCTION CADUSER)-->
+
+    </div>    
+</body>
+</html>
