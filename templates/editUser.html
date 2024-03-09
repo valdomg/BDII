@@ -7,13 +7,15 @@
 </head>
 <body>
     <h1>EDIT</h1>
-    <form method="post" action="{{url_for('cadUser')}}" id="formulario">
+    <form method="post" action="/editUser/{{contato[0]}}" id="formulario">
 
-        Name <input type="text" name="nameCont">
-        Number <input type="number" name="numberCont">
-        Email <input type="email" name="emailCont">
+        Name <input type="text" name="nameCont" value="{{contato[1]}}">
+        Number <input type="number" name="numberCont" value="{{contato[2]}}">
+        Email <input type="email" name="emailCont" value="{{contato[3]}}">
 
         <br>
         <input type="submit" value="EDIT">
+        <br>
+        <a class="button" href="{{url_for('home')}}">HOME</a>
 </body>
 </html>

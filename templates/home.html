@@ -14,14 +14,15 @@
                 <td class="linha">ID</td>
                 <td class="linha">NAME</td>
                 <td class="linha">NUMBER</td>
-                <td class="linha">EMAIL</td>
+                
+                
             </tr>
                 {% for row in data %}
             <tr>
                 <td>{{row[0]}}</td> <!--LINE WITH DATA FROM TABLE CONTACTS COLUNM ID-->
                 <td>{{row[1]}}</td>
                 <td>{{row[2]}}</td>
-                <td>{{row[3]}}</td>
+                
                 
                 <!--BUTTONS FOR EDIT AND DELETE ON TABLE CONTACTS-->
                 
@@ -29,6 +30,7 @@
                     <!--BUTTON ON CLICK TO TAKE VALUE OF ID OF CONTACT TO EDIT-->
                     <a class="button" href="{{url_for('editUser', id=row[0])}}">EDIT</a>
                     <a class="button" href="{{url_for('delUser', id=row[0])}}">DEL</a>
+                    <a class="button" href="{{url_for('detailsUser', id=row[0])}}">DETAILS</a>
                 </td>
 
             </tr>

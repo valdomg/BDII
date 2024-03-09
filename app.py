@@ -59,6 +59,7 @@ def editUser(id):
 
         cursor.execute('UPDATE contacts set name=?, number=?, email=? where id=?', (nome, number, email, id))
         banco.commit()
+        
         return redirect(url_for('home'))
 
 #TAKING ID FOR DELETE USE WITH REQUEST METHOD (GET)
@@ -72,6 +73,20 @@ def delUser(id):
     banco.commit()
     #flash('Dados Deletados', 'warning')
     return redirect(url_for('home'))
+
+
+#Nova rota -------------------------------------------
+@app.route('/detailsUser/<int:id>', methods = ['GET'])
+def detailsUser(id):
+    banco = sqlite3.connect('Agenda.db')
+    cursor = banco.cursor()
+
+    cursor.execute('SELECT * FROM contacts where id=?', (id,))
+    contato = cursor.fetchone()
+    cursor.close()
+
+    return render_template('detailsUser.html', contato=contato)
+
 
 if __name__ == '__main__':
     app.secret_key = 'admin123'
