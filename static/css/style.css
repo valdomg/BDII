@@ -1,32 +1,39 @@
+
+/*CSS PARA A TAG BODYDA PÁGINA*/
 body {
+
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
 
+/*CSS PARA A DIV CLASS CONTAINER PÁGINA*/
 .container {
-    margin-top: 25px;
+    margin-top: 25px; /*Coloca um espaço entre o topo da página e o objeto container*/
     border: 2px solid rgb(255, 255, 255); /* Adiciona uma borda preta de 2px ao redor do conteúdo */
-    width: 90%;
+    width: 90%; /*Coloca o tamanho do objeto em 90% do tamanho original*/
     padding: 10px; /* Adiciona um preenchimento interno de 20px para separar o conteúdo da borda */
-    display: flex; /* Permite que o elemento se ajuste ao tamanho do conteúdo */
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    display: flex; /* Permite que o elemento tenha diferentes comportamentos na renderização  */
+    justify-content: center; /*Centraliza o conteúdo do objeto ao centro da paǵina*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) /*Cria um sombra com desfoque ao redor do objeto*/
 }
 
+/*CSS PARA A TAG H1 PÁGINA*/
 h1{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/*CSS PARA A CLASS TABLE-CSS DA PÁGINA*/
 .table-css{
     text-align: center;
     width: 75%;
     margin-bottom: 20px;
 }
 
+/*CSS PARA O ELEMENTO DENTRO DE H1 DA PÁGINA*/
 .titulo{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 2px solid;
@@ -35,7 +42,7 @@ h1{
     color: white;
     background-color: rgb(60, 160, 253);
 }
-
+/*CSS PARA A TAG TABLE PÁGINA*/
 table{
     width: 100%;
     margin-top: 25px; /* Ajuste o espaçamento conforme necessário */
@@ -45,19 +52,23 @@ table{
     margin-bottom: 10px;
 }
 
+/*CSS PARA A TAG TH E TD DA PÁGINA*/
 th, td {
     border: 1px solid rgb(60, 160, 253);
     padding: 8px;
 }
 
+/*CSS PARA A COLUNA 4 DE TD PÁGINA*/
 td:nth-child(4){
     width: 40%;
 }
 
+/*CSS PARA A TAG TH DA PÁGINA*/
 .header{
     font-weight: bold;
 }
 
+/*CSS PARA A CLASS BUTTON-TABLE DA PÁGINA*/
 .button-table{
     font-size: 13px;
     margin-left: 5px;
@@ -67,6 +78,7 @@ td:nth-child(4){
     border-radius: 10px;
 }
 
+/*CSS PARA A CLASS BUTTON-CADUSER DA PÁGINA*/
 .button-cadUser{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
