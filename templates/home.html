@@ -7,37 +7,42 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
-    <H1>AGENDA</H1>
-    <div class="table">
-        <table>
-            <tr>
-                <td class="linha">ID</td>
-                <td class="linha">NAME</td>
-                <td class="linha">NUMBER</td>
-                
-                
-            </tr>
-                {% for row in data %}
-            <tr>
-                <td>{{row[0]}}</td> <!--LINE WITH DATA FROM TABLE CONTACTS COLUNM ID-->
-                <td>{{row[1]}}</td>
-                <td>{{row[2]}}</td>
-                
-                
-                <!--BUTTONS FOR EDIT AND DELETE ON TABLE CONTACTS-->
-                
-                <td>
-                    <!--BUTTON ON CLICK TO TAKE VALUE OF ID OF CONTACT TO EDIT-->
-                    <a class="button" href="{{url_for('editUser', id=row[0])}}">EDIT</a>
-                    <a class="button" href="{{url_for('delUser', id=row[0])}}">DEL</a>
-                    <a class="button" href="{{url_for('detailsUser', id=row[0])}}">DETAILS</a>
-                </td>
+    <div class="container">
 
-            </tr>
-            {% endfor %}
-        </table>
+        <div class="table-css">
+            <h1 class="titulo">AGENDA</h1>
+            <table>
+                <tr>
+                    <td class="header">ID</td>
+                    <td class="header">NAME</td>
+                    <td class="header">NUMBER</td>
+                    <td class="header">ACTIONS</td>
+                    
+                    
+                </tr>
+                    {% for row in data %}
+                <tr>
+                    <td>{{row[0]}}</td> <!--LINE WITH DATA FROM TABLE CONTACTS COLUNM ID-->
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    
+                    
+                    <!--BUTTONS FOR EDIT AND DELETE ON TABLE CONTACTS-->
+                    
+                    <td>
+                        <!--BUTTON ON CLICK TO TAKE VALUE OF ID OF CONTACT TO EDIT-->
+                        <a class="button-table" href="{{url_for('editUser', id=row[0])}}">EDIT</a>
+                        <a class="button-table" href="{{url_for('delUser', id=row[0])}}">DEL</a>
+                        <a class="button-table" href="{{url_for('detailsUser', id=row[0])}}">DETAILS</a>
+                    </td>
 
-        <a class="button" href="{{url_for('pageUser')}}">CAD USER</a> <!--ROUTE FOR PAGE CADUSER (CALL FUNCTION CADUSER)-->
+                </tr>
+                {% endfor %}
+            </table>
+
+            <br>
+            <a class="button-cadUser" href="{{url_for('pageUser')}}">CAD USER</a> <!--ROUTE FOR PAGE CADUSER (CALL FUNCTION CADUSER)-->
+        </div>
 
     </div>    
 </body>

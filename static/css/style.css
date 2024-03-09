@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    margin-top: 25px;
+    border: 2px solid rgb(255, 255, 255); /* Adiciona uma borda preta de 2px ao redor do conteúdo */
+    width: 90%;
+    padding: 10px; /* Adiciona um preenchimento interno de 20px para separar o conteúdo da borda */
+    display: flex; /* Permite que o elemento se ajuste ao tamanho do conteúdo */
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-css{
+    text-align: center;
+    width: 75%;
+    margin-bottom: 20px;
+}
+
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(60, 160, 253);
+}
+
+table{
+    width: 100%;
+    margin-top: 25px; /* Ajuste o espaçamento conforme necessário */
+    border-collapse: collapse;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid rgb(60, 160, 253);
+    padding: 8px;
+}
+
+td:nth-child(4){
+    width: 40%;
+}
+
+.header{
+    font-weight: bold;
+}
+
+.button-table{
+    font-size: 13px;
+    margin-left: 5px;
+    color: white;
+    background-color: rgb(60,160,253);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.button-cadUser{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    background-color: rgb(60, 160, 253);
+    padding: 8px;
+    border-radius: 10px;
+}
