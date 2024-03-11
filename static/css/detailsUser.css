@@ -1,0 +1,40 @@
+body {
+
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    
+}
+
+.container {
+
+    margin-top: 25px; /*Coloca um espaço entre o topo da página e o objeto container*/
+    margin-bottom: 25px;
+    border: 2px solid rgb(255, 255, 255); /* Adiciona uma borda preta de 2px ao redor do conteúdo */
+    width: 30%; /*Coloca o tamanho do objeto em 90% do tamanho original*/
+    padding: 10px; /* Adiciona um preenchimento interno de 20px para separar o conteúdo da borda */
+    display: inline; /* Permite que o elemento tenha diferentes comportamentos na renderização  */
+    justify-content: left; /*Centraliza o conteúdo do objeto ao centro da paǵina*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /*Cria um sombra com desfoque ao redor do objeto*/
+    margin-left: 60px;
+}
+h1{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#titulo {
+    font-size: 35px;
+}
+
+.infos{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    font-size: 22px;
+}
+
+.button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}

@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETALHES USER</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/detailsUser.css')}}">
 </head>
 <body>
-    <h1>DETALHES</h1>
-    
-
-        Nome: {{contato[1]}} <br>
-        Número: {{contato[2]}}<br>
-        Email: {{contato[3]}} <br>
-
+    <div class="container">
+        <h1 id="titulo">DETALHES</h1>
+            <div class="infos">
+                Nome: {{contato[1]}} <br>
+                Número: {{contato[2]}}<br>
+                Email: {{contato[3]}} <br>
+            </div>
         <br>
         <a class="button" href="{{url_for('home')}}">HOME</a>
+    </div>
+       
 </body>
 </html>
