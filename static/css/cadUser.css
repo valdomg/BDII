@@ -1,0 +1,65 @@
+body{
+    justify-content: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    font-weight: bold;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding-top: 15px ;
+    margin-top: 45px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) /*Cria um sombra com desfoque ao redor do objeto*/
+
+}
+
+.form-group{
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+
+
+.form-group input[type="number"],
+.form-group input [type="text"],
+.form-group input[type="email"]{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input[name="nameCont"]{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group .button {
+    align-items: center;
+    width: 85px;
+    height: 30px;
+    background-color:rgb(60, 160, 253);
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.button-home {
+    color: white;
+    background-color: rgb(60, 160, 253);
+    padding: 6px;
+    
+    border-radius: 4px;
+    
+}

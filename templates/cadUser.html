@@ -7,16 +7,16 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cadUser.css')}}">
 </head>
 <body>
-    <h1>CAD USER</h1>
-    <form method="post" action="{{url_for('cadUser')}}" id="formulario">
-        ID<input type="number" name="idCont">
-        Name <input type="text" name="nameCont">
-        Number <input type="number" name="numberCont">
-        Email <input type="email" name="emailCont">
-        <br>
-        <input type="submit" value="ADICIONAR">
-    </form>
-
+    <div class="container">
+        <h1>CAD USER</h1>
+        <form method="post" action="{{url_for('cadUser')}}" class="form-group">
+            ID<input type="number" name="idCont">
+            Name <input type="text" name="nameCont">
+            Number <input type="number" name="numberCont"> 
+            Email <input type="email" name="emailCont">
+            <input type="submit" value="ADICIONAR" class="button">
+        </form>
+    </div>
     <a class="button" href="{{url_for('home')}}">HOME</a>
 </body>
 </html>
