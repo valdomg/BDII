@@ -47,16 +47,9 @@ def cadUser():
     #redirect to function home for render template home.html
     return redirect(url_for('home'))
 
-<<<<<<< HEAD
 #Page to edit user, with parameters ID, and methods GET and POST 
 @app.route('/editUser/<int:id>', methods = ['GET', 'POST'])
 def editUser(id): #route with parameter id for edit unique contact in table
-=======
-#FOR EDIT USER, CREATE A NEW ROUTE WITH PARAMETER ID IN URL, AND METHODS GET, POST
-@app.route('/editUser/<int:id>', methods = ['GET', 'POST'])
-def editUser(id):
-    #FOR SHOW ALL DATA OF UNIQUE REGISTER
->>>>>>> refs/remotes/origin/main
     if request.method == 'GET':
         banco = sqlite3.connect('Agenda.db')
         cursor = banco.cursor()
