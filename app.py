@@ -17,29 +17,36 @@ def home():
 
     return render_template('home.html', data = data)
 
-
+#Creating route for template cadUser
 @app.route('/cadUser')
 def pageUser():
+    #Render_template show html and css in web browser
     return render_template('cadUser.html')
 
+#Page cadUser with method HTTP Post
 @app.route('/pageUser', methods = ['POST'])
 def cadUser():
-    idCont = request.form['idCont']
+    #Taking valuees on form in cadUser.html
+    idCont = request.form['idCont'] #name of value in form
     nome = request.form['nameCont']
     number = request.form['numberCont']
     email = request.form['emailCont']
 
+    #Connection with database 
     banco = sqlite3.connect('Agenda.db')
     cursor = banco.cursor()
 
+    #.execute is a method for execute commands of sqlite3
     cursor.execute('INSERT INTO contacts VALUES(?,?,?,?)',(idCont, nome, number, email))
+    #Commit values in table 
     banco.commit()
 
+    #redirect to function home for render template home.html
     return redirect(url_for('home'))
 
-
+#Page to edit user, with parameters ID, and methods GET and POST 
 @app.route('/editUser/<int:id>', methods = ['GET', 'POST'])
-def editUser(id):
+def editUser(id): #route with parameter id for edit unique contact in table
     if request.method == 'GET':
         banco = sqlite3.connect('Agenda.db')
         cursor = banco.cursor()
