@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/editUser.css')}}">
     <title>EDIT USER</title>
 </head>
 <body>
+    <div class="container">
     <h1>EDIT</h1>
-    <form method="post" action="/editUser/{{contato[0]}}" id="formulario">
+        <form method="post" action="/editUser/{{contato[0]}}" class="form-group">
 
-        Name <input type="text" name="nameCont" value="{{contato[1]}}">
-        Number <input type="number" name="numberCont" value="{{contato[2]}}">
-        Email <input type="email" name="emailCont" value="{{contato[3]}}">
+            Name <input type="text" name="nameCont" value="{{contato[1]}}">
+            Number <input type="number" name="numberCont" value="{{contato[2]}}">
+            Email <input type="email" name="emailCont" value="{{contato[3]}}">
 
-        <br>
-        <input type="submit" value="EDIT">
-        <br>
-        <a class="button" href="{{url_for('home')}}">HOME</a>
+            
+            <input type="submit" value="EDIT" class="button">
+            
+    </div>
+        <a class="button-home" href="{{url_for('home')}}">HOME</a>
 </body>
 </html>
